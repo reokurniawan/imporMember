@@ -1,142 +1,199 @@
 <!DOCTYPE html>
-<html lang="id">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Import Member Lama - ZHEDVANOIS</title>
-<script src="https://cdn.tailwindcss.com"></script>
+<html lang="id"><head>
+<meta charset="utf-8"><meta name="color-scheme" content="light"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SIM MA Insan Generasi Islami</title>
 <style>
-  body { font-family: 'Segoe UI', sans-serif; background:#0f172a; }
-  .mono { font-family: monospace; }
-</style>
-</head>
-<body class="min-h-screen text-slate-100 p-4 md:p-8">
-<div class="max-w-3xl mx-auto">
+:root{--bg:#ffffff;--card:#fff;--tx:#0f172a;--mu:#64748b;--pr:#2563eb;--bd:#e5e7eb;--ok:#059669;--er:#dc2626}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--tx)}
+a{color:var(--pr);text-decoration:none}.hide{display:none!important}
+header{display:flex;justify-content:space-between;align-items:center;padding:14px 5vw;background:var(--card);border-bottom:1px solid var(--bd);position:sticky;top:0;z-index:5}
+.brand{font-weight:700;display:flex;gap:10px;align-items:center}.logo{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,#059669,#2563eb);display:grid;place-items:center;color:#fff}
+.wrap{max-width:1100px;margin:auto;padding:24px 5vw}
+.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:start}
+@media(max-width:800px){.hero{grid-template-columns:1fr}}
+h1{font-size:clamp(26px,4vw,40px);margin:.2em 0}.mu{color:var(--mu)}
+.box{box-shadow:0 1px 3px rgba(15,23,42,.06);background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:20px}
+.tabs{display:flex;gap:6px;margin-bottom:14px}.tabs button{flex:1;padding:9px;border:1px solid var(--bd);background:transparent;color:var(--tx);border-radius:10px;cursor:pointer}
+.tabs button.on{background:var(--pr);color:#fff;border-color:var(--pr)}
+input,select{width:100%;padding:10px 12px;margin:5px 0 10px;border:1px solid var(--bd);border-radius:10px;background:var(--bg);color:var(--tx);font:inherit}
+.btn{background:var(--pr);color:#fff;border:0;padding:10px 16px;border-radius:10px;cursor:pointer;font:inherit}.btn.g{background:transparent;color:var(--tx);border:1px solid var(--bd)}
+.msg{font-size:14px;margin:6px 0}.err{color:var(--er)}.okc{color:var(--ok)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+.mod{cursor:pointer;border-top:3px solid var(--pr);transition:.15s}.mod:hover{transform:translateY(-2px)}
+.tag{font-size:11px;padding:2px 8px;border-radius:99px;background:var(--bg);border:1px solid var(--bd);color:var(--pr)}
+table{width:100%;border-collapse:collapse;font-size:14px}th,td{padding:8px;border-bottom:1px solid var(--bd);text-align:left}
+.row{display:flex;gap:8px;flex-wrap:wrap}.row>*{flex:1;min-width:120px}
+.news a{display:block;padding:8px 0;border-bottom:1px solid var(--bd);color:var(--tx);font-size:14px}
+.cfg{background:#fef3c7;color:#78350f;padding:10px 14px;border-radius:10px;font-size:13px;margin-bottom:14px}
+</style></head><body>
 
-  <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6 mb-6">
-    <h1 class="text-xl font-black mb-1">🔧 Alat Import Member Lama - ZHEDVANOIS</h1>
-    <p class="text-sm text-slate-400">Alat ini akan mendaftarkan otomatis <b id="total-count">0</b> member lama (dari file CSV) ke Firebase Authentication + Firestore, memakai konfigurasi project yang sama dengan index.html kamu. Setelah proses ini selesai, mereka bisa langsung <b>Masuk Akun</b> di index.html pakai email &amp; password lama mereka, tanpa perlu daftar ulang.</p>
-    <div class="mt-4 bg-amber-900/30 border border-amber-700 text-amber-200 text-xs rounded-xl p-3">
-      ⚠️ <b>Catatan penting:</b><br>
-      1. Jalankan halaman ini <b>hanya sekali</b>. Menjalankannya dua kali untuk email yang sama tidak masalah (otomatis dilewati / "Sudah ada"), tapi tidak perlu diulang.<br>
-      2. Proses ini butuh koneksi internet dan akan memakan waktu (100 akun, ada jeda antar akun agar tidak kena limit Firebase).<br>
-      3. File ini <b>terpisah</b> dari index.html kamu — tidak mengubah / menghapus fitur apapun di sana.<br>
-      4. Setelah selesai, halaman ini boleh dihapus / tidak dipakai lagi.
-    </div>
+<!-- ============ LANDING + LOGIN ============ -->
+<div id="landing">
+<header><div class="brand"><div class="logo">M</div>MA Insan Generasi Islami</div>
+<nav><a href="https://maigi.sch.id/kontak/">Kontak</a> &nbsp; <a href="https://ppdb.maigi.sch.id">PPDB</a> &nbsp; <a href="https://maigi.sch.id">Website</a></nav></header>
+<div class="wrap">
+<div class="hero">
+ <div>
+  <span class="tag">Sistem Informasi Madrasah</span>
+  <h1>MA Insan Generasi Islami</h1>
+  <p class="mu">Tagangser Laok, Waru, Pamekasan. Kelola data siswa, absensi, jurnal &amp; nilai, serta pantau perkembangan anak dalam satu aplikasi.</p>
+  <div class="grid" style="margin:18px 0">
+   <div class="box"><b>Guru</b><p class="mu">Absensi, jurnal, input nilai.</p></div>
+   <div class="box"><b>Murid</b><p class="mu">Lihat nilai &amp; kehadiran.</p></div>
+   <div class="box"><b>Wali Murid</b><p class="mu">Pantau anak dari HP.</p></div>
   </div>
-
-  <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6 mb-6">
-    <button id="start-btn" onclick="startImport()" class="w-full bg-emerald-500 hover:bg-emerald-400 text-slate-900 font-bold py-3 rounded-xl transition">
-      ▶ Mulai Import Member Lama
-    </button>
-    <div class="mt-4">
-      <div class="w-full bg-slate-700 rounded-full h-3 overflow-hidden">
-        <div id="progress-bar" class="bg-emerald-500 h-3 rounded-full transition-all" style="width:0%"></div>
-      </div>
-      <p id="progress-text" class="text-xs text-slate-400 mt-2">Belum dimulai — 0 / 0</p>
-    </div>
+  <h3>Kabar dari maigi.sch.id</h3>
+  <div class="news box">
+   <a href="https://maigi.sch.id/sk-panitia-berita-acara-peserta-ujian-madrasah/">Contoh SK Panitia, Berita Acara, Peserta Ujian Madrasah, dan Kelulusan</a>
+   <a href="https://maigi.sch.id/cara-mengatasi-gagal-registrasi-akun-emis-kepala/">9 Cara Mengatasi Gagal Registrasi Akun Emis Kepala Madrasah</a>
+   <a href="https://maigi.sch.id/buku-bahasa-arab-kelas-x-xi-xii-madrasah-aliyah/">Buku Bahasa Arab Kelas X, XI dan XII Madrasah Aliyah</a>
+   <a href="https://maigi.sch.id/contoh-soal-ujian-sma-ma-2020-2021/">Contoh Soal Ujian SMA/MA Tahun Pelajaran 2020/2021</a>
+   <a href="https://maigi.sch.id/category/perangkat-pembelajara/">Perangkat Pembelajaran &rarr; (RPP, Silabus, Prota, Promes)</a>
   </div>
-
-  <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6">
-    <h2 class="text-sm font-bold mb-2 text-slate-300">Log Proses</h2>
-    <div id="log" class="mono text-xs space-y-1 max-h-96 overflow-y-auto bg-slate-900 rounded-xl p-3"></div>
+  <p class="mu" style="font-size:13px">Tentang: <a href="https://maigi.sch.id/visi-dan-misi/">Visi &amp; Misi</a> · <a href="https://maigi.sch.id/sejarah/">Sejarah</a> · <a href="https://maigi.sch.id/struktur-organisasi/">Struktur Organisasi</a> · <a href="https://www.youtube.com/@maigiwaru/">YouTube</a></p>
+ </div>
+ <div class="box">
+  <div id="cfgwarn" class="cfg hide">Firebase belum dikonfigurasi. Isi <code>firebaseConfig</code> di index.html.</div>
+  <div class="tabs"><button id="tL" class="on">Masuk</button><button id="tR">Daftar</button></div>
+  <div id="fL">
+   <label>Email</label><input id="lE" type="email" autocomplete="username">
+   <label>Password</label><input id="lP" type="password" autocomplete="current-password">
+   <button class="btn" id="bL" style="width:100%">Masuk</button>
+   <p class="msg"><a href="#" id="reset">Lupa password?</a></p>
   </div>
+  <div id="fR" class="hide">
+   <label>Nama lengkap</label><input id="rN">
+   <label>Daftar sebagai</label><select id="rRole"><option value="murid">Murid</option><option value="wali">Wali Murid</option></select>
+   <label id="rLab">NIS</label><input id="rNis" placeholder="Nomor Induk Siswa">
+   <label>Email</label><input id="rE" type="email">
+   <label>Password (min. 6)</label><input id="rP" type="password">
+   <button class="btn" id="bR" style="width:100%">Buat Akun</button>
+   <p class="mu" style="font-size:12px">Akun guru dibuat/ditetapkan oleh admin madrasah.</p>
+  </div>
+  <div id="amsg" class="msg"></div>
+ </div>
+</div>
+</div>
+<footer class="wrap mu" style="font-size:13px">© 2026 MA Insan Generasi Islami · Tagangser Laok Waru Pamekasan</footer>
+</div>
 
+<!-- ============ APP ============ -->
+<div id="app" class="hide">
+<header><div class="brand"><div class="logo">M</div><span id="who"></span></div><div class="row" style="flex:none;align-items:center"><select id="vas" class="hide" style="width:auto;margin:0"><option value="guru">Lihat sebagai: Guru</option><option value="murid">Lihat sebagai: Murid</option><option value="wali">Lihat sebagai: Wali</option></select><button class="btn g" id="out">Keluar</button></div></header>
+<div class="wrap"><div id="view"></div></div>
 </div>
 
 <script type="module">
-import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-import {
-  getAuth, createUserWithEmailAndPassword, signOut
-} from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
-import {
-  getFirestore, doc, setDoc, collection
-} from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
-
-// KONFIGURASI SAMA PERSIS DENGAN index.html
-const appId = 'zhedvator-app';
+/* ====== 1. ISI KONFIGURASI FIREBASE ANDA (Project settings > Your apps > Web) ====== */
 const firebaseConfig = {
-    apiKey: "AIzaSyDdng3RtfQovjm6I5upG7CKGrKz40byNgw",
-    authDomain: "zhedvator-app.firebaseapp.com",
-    projectId: "zhedvator-app",
-    storageBucket: "zhedvator-app.firebasestorage.app",
-    messagingSenderId: "1017546177908",
-    appId: "1:1017546177908:web:7cd8e9b9cd076d3e154021",
-    measurementId: "G-JFTSX7BEDE"
+  apiKey: "AIzaSyATVtIQ__52aRAEFIOt1DeLsJXzeENK_78",
+  authDomain: "papantulis-39409.firebaseapp.com",
+  projectId: "papantulis-39409",
+  storageBucket: "papantulis-39409.firebasestorage.app",
+  messagingSenderId: "1000307187807",
+  appId: "1:1000307187807:web:b2d9b074b9d6b9b2eb7bea"
+};
+/* ================================================================================== */
+import {initializeApp} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+import {getAuth,onAuthStateChanged,signInWithEmailAndPassword,createUserWithEmailAndPassword,signOut,sendPasswordResetEmail} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
+import {getFirestore,doc,getDoc,setDoc,addDoc,collection,getDocs,query,where,deleteDoc,serverTimestamp} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
+
+const $=s=>document.querySelector(s), esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const configured=!firebaseConfig.apiKey.startsWith("ISI_");
+if(!configured)$("#cfgwarn").classList.remove("hide");
+const app=initializeApp(firebaseConfig),auth=getAuth(app),db=getFirestore(app);
+let me=null;
+const say=(t,ok)=>{$("#amsg").className="msg "+(ok?"okc":"err");$("#amsg").textContent=t};
+const today=()=>new Date().toISOString().slice(0,10);
+
+// tabs
+$("#tL").onclick=()=>{$("#fL").classList.remove("hide");$("#fR").classList.add("hide");$("#tL").classList.add("on");$("#tR").classList.remove("on")};
+$("#tR").onclick=()=>{$("#fR").classList.remove("hide");$("#fL").classList.add("hide");$("#tR").classList.add("on");$("#tL").classList.remove("on")};
+$("#rRole").onchange=e=>$("#rLab").textContent=e.target.value==="wali"?"NIS anak":"NIS";
+
+$("#bL").onclick=async()=>{try{await signInWithEmailAndPassword(auth,$("#lE").value.trim(),$("#lP").value)}catch(e){say("Email atau password salah.")}};
+$("#reset").onclick=async e=>{e.preventDefault();try{await sendPasswordResetEmail(auth,$("#lE").value.trim());say("Link reset dikirim ke email.",1)}catch{say("Isi email dengan benar dulu.")}};
+$("#bR").onclick=async()=>{
+  const n=$("#rN").value.trim(),nis=$("#rNis").value.trim(),role=$("#rRole").value;
+  if(!n||!nis)return say("Nama dan NIS wajib diisi.");
+  try{
+    const c=await createUserWithEmailAndPassword(auth,$("#rE").value.trim(),$("#rP").value);
+    await setDoc(doc(db,"users",c.user.uid),{nama:n,role,nis,email:c.user.email,created:serverTimestamp()});
+    location.reload();
+  }catch(e){say(e.code==="auth/weak-password"?"Password minimal 6 karakter.":"Gagal daftar: "+e.code)}
+};
+$("#out").onclick=()=>signOut(auth);
+$("#vas").onchange=e=>{
+  const r=e.target.value;
+  if(r!=="guru"){const n=prompt("Masukkan NIS siswa yang ingin dilihat:");if(!n){e.target.value=me.role;return}me.nis=n.trim()}
+  me.role=r;$("#who").textContent=`${me.nama} · admin (${r})`;home();
 };
 
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const db = getFirestore(app);
-const USERS_COL = collection(db, 'artifacts', appId, 'public', 'data', 'users');
+onAuthStateChanged(auth,async u=>{
+  if(!u){me=null;$("#app").classList.add("hide");$("#landing").classList.remove("hide");return}
+  const s=await getDoc(doc(db,"users",u.uid));
+  if(!s.exists()){say("Profil belum ada. Hubungi admin.");signOut(auth);return}
+  me={uid:u.uid,...s.data()};
+  me.admin=me.role==="admin";
+  if(me.admin){me.role="guru";$("#vas").classList.remove("hide");$("#vas").value="guru"}else $("#vas").classList.add("hide");
+  $("#landing").classList.add("hide");$("#app").classList.remove("hide");
+  $("#who").textContent=me.admin?`${me.nama} · admin`:`${me.nama} · ${me.role}`;home();
+});
 
-// DATA MEMBER LAMA (dari CSV)
-const members = [{"nama": "Ahmad Kusnadi", "nik": "3574381801880591", "wa": "085750592276", "email": "ahmad.kusnadi124@outlook.co.id", "password": "Ahmad$1987", "ttl": "Bandung, 7 Mei 1987", "bank": "OVO", "norek": "08585060387", "nama_pemilik": "AHMAD KUSNADI"}, {"nama": "Kevin Pasaribu", "nik": "5185012603953316", "wa": "081387958903", "email": "kevin.pasaribu156@gmail.com", "password": "Kevin*1992", "ttl": "Balikpapan, 4 Sep 1992", "bank": "BRI", "norek": "9384762202", "nama_pemilik": "KEVIN PASARIBU"}, {"nama": "Siti Gunawan", "nik": "3623250305918724", "wa": "081390898792", "email": "siti.gunawan103@yahoo.com", "password": "Siti!2003", "ttl": "Medan, 4 Sep 2003", "bank": "BRI", "norek": "9325527926", "nama_pemilik": "SITI GUNAWAN"}, {"nama": "Nia Firmansyah", "nik": "3543182404829735", "wa": "082181666879", "email": "nia.firmansyah418@outlook.co.id", "password": "Nia!2004", "ttl": "Padang, 5 Mei 2004", "bank": "DANA", "norek": "087718617874", "nama_pemilik": "NIA FIRMANSYAH"}, {"nama": "Nia Perkasa", "nik": "7355551806999259", "wa": "089695788279", "email": "nia.perkasa753@gmail.com", "password": "Nia@1990", "ttl": "Balikpapan, 27 Jan 1990", "bank": "SHOPEEPAY", "norek": "082257708447", "nama_pemilik": "NIA PERKASA"}, {"nama": "Doni Hutapea", "nik": "3541101911953683", "wa": "085871583980", "email": "doni.hutapea751@gmail.com", "password": "Doni$1987", "ttl": "Bekasi, 25 Apr 1987", "bank": "MANDIRI", "norek": "4073188562", "nama_pemilik": "DONI HUTAPEA"}, {"nama": "Hendra Kusnadi", "nik": "3507230206765079", "wa": "081360617872", "email": "hendra.kusnadi520@zhedmail.id", "password": "Hendra$1993", "ttl": "Padang, 22 Okt 1993", "bank": "BRI", "norek": "3961967678", "nama_pemilik": "HENDRA KUSNADI"}, {"nama": "Mega Saputra", "nik": "3556291807977027", "wa": "085789327865", "email": "mega.saputra237@yahoo.com", "password": "Mega!1999", "ttl": "Pontianak, 28 Des 1999", "bank": "OVO", "norek": "085762393655", "nama_pemilik": "MEGA SAPUTRA"}, {"nama": "Hendra Kusnadi", "nik": "3109512304964786", "wa": "085765372820", "email": "hendra.kusnadi922@yahoo.com", "password": "Hendra!1990", "ttl": "Depok, 11 Mar 1990", "bank": "GOPAY", "norek": "087818049989", "nama_pemilik": "HENDRA KUSNADI"}, {"nama": "Gilang Hutapea", "nik": "1321332710958461", "wa": "085714878234", "email": "gilang.hutapea407@gmail.com", "password": "Gilang@2001", "ttl": "Pekanbaru, 13 Apr 2001", "bank": "OVO", "norek": "087835475717", "nama_pemilik": "GILANG HUTAPEA"}, {"nama": "Ika Pratama", "nik": "5132712406965019", "wa": "085764987063", "email": "ika.pratama689@yahoo.com", "password": "Ika$1987", "ttl": "Banjarmasin, 17 Feb 1987", "bank": "MANDIRI", "norek": "3631882920", "nama_pemilik": "IKA PRATAMA"}, {"nama": "Siti Lubis", "nik": "7356670803943047", "wa": "081346678303", "email": "siti.lubis117@yahoo.com", "password": "Siti#2005", "ttl": "Palembang, 12 Jul 2005", "bank": "BNI", "norek": "4522771087", "nama_pemilik": "SITI LUBIS"}, {"nama": "Kevin Siregar", "nik": "1240581005941478", "wa": "087734800837", "email": "kevin.siregar697@outlook.co.id", "password": "Kevin*1985", "ttl": "Bekasi, 9 Feb 1985", "bank": "BNI", "norek": "9227028536", "nama_pemilik": "KEVIN SIREGAR"}, {"nama": "Andi Kusuma", "nik": "3324102407986181", "wa": "08525320425", "email": "andi.kusuma567@yahoo.com", "password": "Andi@1993", "ttl": "Tangerang, 6 Apr 1993", "bank": "DANA", "norek": "087843949188", "nama_pemilik": "ANDI KUSUMA"}, {"nama": "Arif Saputra", "nik": "1283030102852564", "wa": "082126775029", "email": "arif.saputra375@zhedmail.id", "password": "Arif*2001", "ttl": "Banjarmasin, 25 Sep 2001", "bank": "BCA", "norek": "2720209564", "nama_pemilik": "ARIF SAPUTRA"}, {"nama": "Riki Perkasa", "nik": "3653241910923340", "wa": "082255284005", "email": "riki.perkasa163@outlook.co.id", "password": "Riki$1988", "ttl": "Malang, 9 Mar 1988", "bank": "GOPAY", "norek": "085866395014", "nama_pemilik": "RIKI PERKASA"}, {"nama": "Putri Lubis", "nik": "5159792702914839", "wa": "089670498616", "email": "putri.lubis50@yahoo.com", "password": "Putri#2000", "ttl": "Yogyakarta, 26 Jun 2000", "bank": "GOPAY", "norek": "085839637889", "nama_pemilik": "PUTRI LUBIS"}, {"nama": "Doni Purnama", "nik": "7367742811973335", "wa": "081368501098", "email": "doni.purnama722@yahoo.com", "password": "Doni#1989", "ttl": "Yogyakarta, 23 Apr 1989", "bank": "BNI", "norek": "9831641645", "nama_pemilik": "DONI PURNAMA"}, {"nama": "Indah Kusnadi", "nik": "3155170307838019", "wa": "088148622093", "email": "indah.kusnadi161@yahoo.com", "password": "Indah@1989", "ttl": "Makassar, 18 Apr 1989", "bank": "BNI", "norek": "2682004700", "nama_pemilik": "INDAH KUSNADI"}, {"nama": "Gilang Sucipto", "nik": "5181040706830728", "wa": "085315786089", "email": "gilang.sucipto412@yahoo.com", "password": "Gilang*2001", "ttl": "Bogor, 27 Feb 2001", "bank": "DANA", "norek": "089685338710", "nama_pemilik": "GILANG SUCIPTO"}, {"nama": "Andi Hadi", "nik": "3633611109788516", "wa": "082134035719", "email": "andi.hadi764@zhedmail.id", "password": "Andi@1985", "ttl": "Malang, 26 Sep 1985", "bank": "SHOPEEPAY", "norek": "085375815805", "nama_pemilik": "ANDI HADI"}, {"nama": "Yudi Santoso", "nik": "3319462306891379", "wa": "081316615694", "email": "yudi.santoso730@zhedmail.id", "password": "Yudi$1995", "ttl": "Tangerang, 25 Jan 1995", "bank": "BNI", "norek": "9866112768", "nama_pemilik": "YUDI SANTOSO"}, {"nama": "Yudi Wahyudi", "nik": "3114491908881650", "wa": "087742494229", "email": "yudi.wahyudi358@outlook.co.id", "password": "Yudi*1991", "ttl": "Surabaya, 9 Des 1991", "bank": "BCA", "norek": "6815454165", "nama_pemilik": "YUDI WAHYUDI"}, {"nama": "Andi Purnama", "nik": "3682670409761382", "wa": "085878930581", "email": "andi.purnama374@gmail.com", "password": "Andi@2000", "ttl": "Padang, 28 Nov 2000", "bank": "MANDIRI", "norek": "7001384391", "nama_pemilik": "ANDI PURNAMA"}, {"nama": "Reza Ramadhan", "nik": "3577551806985971", "wa": "087712837994", "email": "reza.ramadhan18@outlook.co.id", "password": "Reza@1989", "ttl": "Pekanbaru, 19 Des 1989", "bank": "BRI", "norek": "8953409567", "nama_pemilik": "REZA RAMADHAN"}, {"nama": "Kevin Hasibuan", "nik": "7374680511995018", "wa": "089630918237", "email": "kevin.hasibuan730@gmail.com", "password": "Kevin*1988", "ttl": "Bandung, 6 Feb 1988", "bank": "DANA", "norek": "087827107133", "nama_pemilik": "KEVIN HASIBUAN"}, {"nama": "Dwi Kusuma", "nik": "5153541208874476", "wa": "085241347466", "email": "dwi.kusuma675@yahoo.com", "password": "Dwi*2004", "ttl": "Bandung, 18 Mar 2004", "bank": "MANDIRI", "norek": "4388049386", "nama_pemilik": "DWI KUSUMA"}, {"nama": "Amanda Kurniawan", "nik": "3283691911768935", "wa": "089658898265", "email": "amanda.kurniawan741@zhedmail.id", "password": "Amanda!1993", "ttl": "Bogor, 16 Apr 1993", "bank": "BNI", "norek": "8372190523", "nama_pemilik": "AMANDA KURNIAWAN"}, {"nama": "Sari Lubis", "nik": "1205252401792098", "wa": "085362152099", "email": "sari.lubis463@yahoo.com", "password": "Sari#1985", "ttl": "Tangerang, 21 Jan 1985", "bank": "BRI", "norek": "4882387381", "nama_pemilik": "SARI LUBIS"}, {"nama": "Indah Siregar", "nik": "7304412501943110", "wa": "082142429830", "email": "indah.siregar323@zhedmail.id", "password": "Indah*2004", "ttl": "Pontianak, 20 Nov 2004", "bank": "DANA", "norek": "08818421261", "nama_pemilik": "INDAH SIREGAR"}, {"nama": "Eko Sucipto", "nik": "7369742409921425", "wa": "081268933110", "email": "eko.sucipto143@zhedmail.id", "password": "Eko@1987", "ttl": "Pekanbaru, 20 Des 1987", "bank": "BRI", "norek": "9415001509", "nama_pemilik": "EKO SUCIPTO"}, {"nama": "Riki Hutapea", "nik": "3323801409750915", "wa": "088157232701", "email": "riki.hutapea808@yahoo.com", "password": "Riki#2000", "ttl": "Balikpapan, 15 Feb 2000", "bank": "BNI", "norek": "2959456293", "nama_pemilik": "RIKI HUTAPEA"}, {"nama": "Fajar Hidayat", "nik": "3532410911999780", "wa": "085899229457", "email": "fajar.hidayat844@gmail.com", "password": "Fajar#1986", "ttl": "Solo, 2 Jun 1986", "bank": "GOPAY", "norek": "081263507927", "nama_pemilik": "FAJAR HIDAYAT"}, {"nama": "Riki Pratama", "nik": "1253221905907003", "wa": "087738461047", "email": "riki.pratama28@yahoo.com", "password": "Riki@1989", "ttl": "Denpasar, 5 Mei 1989", "bank": "OVO", "norek": "087874523144", "nama_pemilik": "RIKI PRATAMA"}, {"nama": "Budi Utama", "nik": "1269480212772489", "wa": "082232006042", "email": "budi.utama70@zhedmail.id", "password": "Budi!1995", "ttl": "Denpasar, 12 Agt 1995", "bank": "BNI", "norek": "9236353614", "nama_pemilik": "BUDI UTAMA"}, {"nama": "Lestari Gunawan", "nik": "3288062211793230", "wa": "089662179749", "email": "lestari.gunawan707@gmail.com", "password": "Lestari@1986", "ttl": "Bekasi, 19 Nov 1986", "bank": "GOPAY", "norek": "082283466605", "nama_pemilik": "LESTARI GUNAWAN"}, {"nama": "Wahyu Hutapea", "nik": "3229591909838803", "wa": "087874165960", "email": "wahyu.hutapea305@gmail.com", "password": "Wahyu*2004", "ttl": "Depok, 1 Mei 2004", "bank": "SHOPEEPAY", "norek": "082192481840", "nama_pemilik": "WAHYU HUTAPEA"}, {"nama": "Ahmad Nugroho", "nik": "5136642410884613", "wa": "085226162808", "email": "ahmad.nugroho204@zhedmail.id", "password": "Ahmad@1991", "ttl": "Balikpapan, 23 Jul 1991", "bank": "OVO", "norek": "082113505697", "nama_pemilik": "AHMAD NUGROHO"}, {"nama": "Hendra Lubis", "nik": "1287712312828670", "wa": "081273131855", "email": "hendra.lubis37@zhedmail.id", "password": "Hendra*2001", "ttl": "Yogyakarta, 16 Sep 2001", "bank": "BCA", "norek": "7242630202", "nama_pemilik": "HENDRA LUBIS"}, {"nama": "Riki Gunawan", "nik": "5141761001968129", "wa": "081234567686", "email": "riki.gunawan70@yahoo.com", "password": "Riki$1986", "ttl": "Medan, 8 Des 1986", "bank": "OVO", "norek": "085773518352", "nama_pemilik": "RIKI GUNAWAN"}, {"nama": "Dian Saputra", "nik": "3276802312767275", "wa": "085882971964", "email": "dian.saputra955@outlook.co.id", "password": "Dian@1995", "ttl": "Semarang, 26 Nov 1995", "bank": "BNI", "norek": "3938539545", "nama_pemilik": "DIAN SAPUTRA"}, {"nama": "Riki Subagyo", "nik": "1330172612936099", "wa": "085762809598", "email": "riki.subagyo480@gmail.com", "password": "Riki#1996", "ttl": "Jakarta, 26 Feb 1996", "bank": "DANA", "norek": "081255208951", "nama_pemilik": "RIKI SUBAGYO"}, {"nama": "Andi Kusnadi", "nik": "3176071607779936", "wa": "085344342545", "email": "andi.kusnadi272@gmail.com", "password": "Andi!2003", "ttl": "Malang, 6 Nov 2003", "bank": "SHOPEEPAY", "norek": "082253828858", "nama_pemilik": "ANDI KUSNADI"}, {"nama": "Dian Hasibuan", "nik": "1304342503924042", "wa": "089622037329", "email": "dian.hasibuan873@zhedmail.id", "password": "Dian@2003", "ttl": "Solo, 27 Feb 2003", "bank": "BNI", "norek": "5310409439", "nama_pemilik": "DIAN HASIBUAN"}, {"nama": "Tania Perkasa", "nik": "3287560608796353", "wa": "085222390455", "email": "tania.perkasa74@yahoo.com", "password": "Tania#1993", "ttl": "Pontianak, 15 Mei 1993", "bank": "DANA", "norek": "088116542748", "nama_pemilik": "TANIA PERKASA"}, {"nama": "Tania Subagyo", "nik": "3480051605926784", "wa": "089698760430", "email": "tania.subagyo231@gmail.com", "password": "Tania!2004", "ttl": "Palembang, 11 Nov 2004", "bank": "BCA", "norek": "3518383142", "nama_pemilik": "TANIA SUBAGYO"}, {"nama": "Dian Pratama", "nik": "1337691909796794", "wa": "08131246704", "email": "dian.pratama385@outlook.co.id", "password": "Dian!1992", "ttl": "Depok, 24 Okt 1992", "bank": "SHOPEEPAY", "norek": "082211896566", "nama_pemilik": "DIAN PRATAMA"}, {"nama": "Putri Cahyono", "nik": "1332271609990743", "wa": "085778155354", "email": "putri.cahyono559@gmail.com", "password": "Putri!1985", "ttl": "Depok, 8 Mar 1985", "bank": "SHOPEEPAY", "norek": "08771702235", "nama_pemilik": "PUTRI CAHYONO"}, {"nama": "Reza Kusuma", "nik": "3502650904877549", "wa": "081341193636", "email": "reza.kusuma531@yahoo.com", "password": "Reza!1994", "ttl": "Palembang, 20 Agt 1994", "bank": "BCA", "norek": "8768999926", "nama_pemilik": "REZA KUSUMA"}, {"nama": "Ahmad Pasaribu", "nik": "3269400811807426", "wa": "085225629244", "email": "ahmad.pasaribu415@yahoo.com", "password": "Ahmad@1998", "ttl": "Bekasi, 14 Sep 1998", "bank": "OVO", "norek": "085329016126", "nama_pemilik": "AHMAD PASARIBU"}, {"nama": "Bambang Kusuma", "nik": "1326062611960702", "wa": "081329583772", "email": "bambang.kusuma698@yahoo.com", "password": "Bambang@1997", "ttl": "Balikpapan, 14 Jul 1997", "bank": "SHOPEEPAY", "norek": "089634183711", "nama_pemilik": "BAMBANG KUSUMA"}, {"nama": "Kurniawan Susanto", "nik": "3557350401942682", "wa": "08121170550", "email": "kurniawan.susanto477@yahoo.com", "password": "Kurniawan*1986", "ttl": "Denpasar, 7 Jun 1986", "bank": "MANDIRI", "norek": "6970584667", "nama_pemilik": "KURNIAWAN SUSANTO"}, {"nama": "Ika Firmansyah", "nik": "7314390712795339", "wa": "082257476640", "email": "ika.firmansyah329@outlook.co.id", "password": "Ika@1989", "ttl": "Medan, 24 Okt 1989", "bank": "SHOPEEPAY", "norek": "082288388696", "nama_pemilik": "IKA FIRMANSYAH"}, {"nama": "Rizky Purnama", "nik": "3381371406772322", "wa": "082196064487", "email": "rizky.purnama426@zhedmail.id", "password": "Rizky$2004", "ttl": "Pontianak, 23 Des 2004", "bank": "GOPAY", "norek": "087848548737", "nama_pemilik": "RIZKY PURNAMA"}, {"nama": "Wahyu Setiawan", "nik": "1385320807986819", "wa": "087826805959", "email": "wahyu.setiawan721@gmail.com", "password": "Wahyu*1985", "ttl": "Palembang, 12 Okt 1985", "bank": "GOPAY", "norek": "085865071937", "nama_pemilik": "WAHYU SETIAWAN"}, {"nama": "Eko Setiawan", "nik": "5184240210927558", "wa": "085376460659", "email": "eko.setiawan330@gmail.com", "password": "Eko@1999", "ttl": "Palembang, 25 Jul 1999", "bank": "BRI", "norek": "2488196229", "nama_pemilik": "EKO SETIAWAN"}, {"nama": "Ahmad Ramadhan", "nik": "7383551103840832", "wa": "087793090760", "email": "ahmad.ramadhan281@gmail.com", "password": "Ahmad$1998", "ttl": "Banjarmasin, 7 Des 1998", "bank": "BCA", "norek": "5287288917", "nama_pemilik": "AHMAD RAMADHAN"}, {"nama": "Hendra Kusnadi", "nik": "3534540106768011", "wa": "082276682591", "email": "hendra.kusnadi600@gmail.com", "password": "Hendra$1997", "ttl": "Pontianak, 10 Agt 1997", "bank": "BRI", "norek": "5615058375", "nama_pemilik": "HENDRA KUSNADI"}, {"nama": "Fajar Lubis", "nik": "1367061609783746", "wa": "089696747428", "email": "fajar.lubis255@zhedmail.id", "password": "Fajar*2005", "ttl": "Bandung, 20 Nov 2005", "bank": "OVO", "norek": "082185704094", "nama_pemilik": "FAJAR LUBIS"}, {"nama": "Gilang Gunawan", "nik": "3162681511785900", "wa": "081259610382", "email": "gilang.gunawan957@outlook.co.id", "password": "Gilang@1999", "ttl": "Bogor, 23 Apr 1999", "bank": "OVO", "norek": "087863567911", "nama_pemilik": "GILANG GUNAWAN"}, {"nama": "Siti Lestari", "nik": "5183630303805184", "wa": "085247462507", "email": "siti.lestari206@outlook.co.id", "password": "Siti$2005", "ttl": "Padang, 10 Sep 2005", "bank": "BRI", "norek": "3891337404", "nama_pemilik": "SITI LESTARI"}, {"nama": "Sari Hadi", "nik": "5110752605968302", "wa": "085355192885", "email": "sari.hadi430@zhedmail.id", "password": "Sari@2005", "ttl": "Solo, 12 Agt 2005", "bank": "BRI", "norek": "7358564850", "nama_pemilik": "SARI HADI"}, {"nama": "Aditya Hidayat", "nik": "1353310206950747", "wa": "08576554807", "email": "aditya.hidayat127@gmail.com", "password": "Aditya#2001", "ttl": "Solo, 23 Feb 2001", "bank": "BCA", "norek": "9285535190", "nama_pemilik": "ADITYA HIDAYAT"}, {"nama": "Gilang Firmansyah", "nik": "3688651006962303", "wa": "081249699883", "email": "gilang.firmansyah377@gmail.com", "password": "Gilang@2000", "ttl": "Denpasar, 21 Apr 2000", "bank": "BNI", "norek": "2371700995", "nama_pemilik": "GILANG FIRMANSYAH"}, {"nama": "Aditya Kusnadi", "nik": "1351342702957056", "wa": "085856084892", "email": "aditya.kusnadi711@gmail.com", "password": "Aditya!2004", "ttl": "Bekasi, 24 Des 2004", "bank": "MANDIRI", "norek": "7304201584", "nama_pemilik": "ADITYA KUSNADI"}, {"nama": "Nur Utama", "nik": "3433802606847974", "wa": "087874306953", "email": "nur.utama892@outlook.co.id", "password": "Nur#2002", "ttl": "Medan, 8 Mei 2002", "bank": "BNI", "norek": "3954040803", "nama_pemilik": "NUR UTAMA"}, {"nama": "Toni Prasetyo", "nik": "3551720210756120", "wa": "082236378220", "email": "toni.prasetyo545@yahoo.com", "password": "Toni$1991", "ttl": "Tangerang, 10 Agt 1991", "bank": "BCA", "norek": "9727623779", "nama_pemilik": "TONI PRASETYO"}, {"nama": "Sari Hidayat", "nik": "3404702408947174", "wa": "087862334512", "email": "sari.hidayat199@yahoo.com", "password": "Sari$1999", "ttl": "Bogor, 26 Jul 1999", "bank": "BRI", "norek": "7425039134", "nama_pemilik": "SARI HIDAYAT"}, {"nama": "Andi Gunawan", "nik": "3234591108910520", "wa": "081244378669", "email": "andi.gunawan272@gmail.com", "password": "Andi#2001", "ttl": "Balikpapan, 3 Mar 2001", "bank": "BNI", "norek": "4133219794", "nama_pemilik": "ANDI GUNAWAN"}, {"nama": "Aditya Susanto", "nik": "3284251710985829", "wa": "082281513964", "email": "aditya.susanto605@zhedmail.id", "password": "Aditya!2004", "ttl": "Banjarmasin, 11 Des 2004", "bank": "SHOPEEPAY", "norek": "08778727850", "nama_pemilik": "ADITYA SUSANTO"}, {"nama": "Hendra Santoso", "nik": "1380062406784219", "wa": "087719565151", "email": "hendra.santoso350@zhedmail.id", "password": "Hendra@1987", "ttl": "Bekasi, 17 Okt 1987", "bank": "OVO", "norek": "081255288854", "nama_pemilik": "HENDRA SANTOSO"}, {"nama": "Reza Wijaya", "nik": "1378730303808702", "wa": "088198789989", "email": "reza.wijaya81@zhedmail.id", "password": "Reza$2000", "ttl": "Palembang, 9 Mar 2000", "bank": "BNI", "norek": "7079227357", "nama_pemilik": "REZA WIJAYA"}, {"nama": "Bambang Siregar", "nik": "3614590805921394", "wa": "08123224232", "email": "bambang.siregar308@outlook.co.id", "password": "Bambang*2001", "ttl": "Bekasi, 18 Nov 2001", "bank": "DANA", "norek": "08571685552", "nama_pemilik": "BAMBANG SIREGAR"}, {"nama": "Lestari Prasetyo", "nik": "3464761008951820", "wa": "08531261045", "email": "lestari.prasetyo385@outlook.co.id", "password": "Lestari$1991", "ttl": "Banjarmasin, 26 Sep 1991", "bank": "OVO", "norek": "085829789654", "nama_pemilik": "LESTARI PRASETYO"}, {"nama": "Rian Utama", "nik": "7349050909798582", "wa": "08225782272", "email": "rian.utama743@outlook.co.id", "password": "Rian$2002", "ttl": "Denpasar, 4 Okt 2002", "bank": "BNI", "norek": "7092373637", "nama_pemilik": "RIAN UTAMA"}, {"nama": "Dewi Lubis", "nik": "1244181307920323", "wa": "082141791190", "email": "dewi.lubis140@yahoo.com", "password": "Dewi$2003", "ttl": "Depok, 14 Apr 2003", "bank": "MANDIRI", "norek": "2425476695", "nama_pemilik": "DEWI LUBIS"}, {"nama": "Putri Hutapea", "nik": "3611151503771533", "wa": "085892875138", "email": "putri.hutapea830@outlook.co.id", "password": "Putri!2004", "ttl": "Bandung, 4 Feb 2004", "bank": "GOPAY", "norek": "082273898260", "nama_pemilik": "PUTRI HUTAPEA"}, {"nama": "Rian Hutapea", "nik": "3154440606914198", "wa": "081316643127", "email": "rian.hutapea69@yahoo.com", "password": "Rian@1999", "ttl": "Denpasar, 18 Apr 1999", "bank": "BNI", "norek": "3724111824", "nama_pemilik": "RIAN HUTAPEA"}, {"nama": "Dian Cahyono", "nik": "5112650809999534", "wa": "082119219805", "email": "dian.cahyono275@outlook.co.id", "password": "Dian$2001", "ttl": "Solo, 15 Des 2001", "bank": "BRI", "norek": "1658829609", "nama_pemilik": "DIAN CAHYONO"}, {"nama": "Wahyu Wibowo", "nik": "3459650106963486", "wa": "082156239955", "email": "wahyu.wibowo997@yahoo.com", "password": "Wahyu$1996", "ttl": "Makassar, 25 Mei 1996", "bank": "OVO", "norek": "089629832580", "nama_pemilik": "WAHYU WIBOWO"}, {"nama": "Sri Wibowo", "nik": "3266482610999054", "wa": "082154451233", "email": "sri.wibowo542@yahoo.com", "password": "Sri@1989", "ttl": "Padang, 9 Apr 1989", "bank": "OVO", "norek": "081362382280", "nama_pemilik": "SRI WIBOWO"}, {"nama": "Hendra Wahyudi", "nik": "3663151712886358", "wa": "088184294724", "email": "hendra.wahyudi834@gmail.com", "password": "Hendra!1992", "ttl": "Pekanbaru, 10 Des 1992", "bank": "MANDIRI", "norek": "5395723792", "nama_pemilik": "HENDRA WAHYUDI"}, {"nama": "Hendra Setiawan", "nik": "3304592701838134", "wa": "089670003250", "email": "hendra.setiawan627@yahoo.com", "password": "Hendra#1998", "ttl": "Solo, 26 Mar 1998", "bank": "BCA", "norek": "8107536916", "nama_pemilik": "HENDRA SETIAWAN"}, {"nama": "Dewi Hadi", "nik": "3425721812942562", "wa": "081399814667", "email": "dewi.hadi115@zhedmail.id", "password": "Dewi!1991", "ttl": "Bandung, 27 Agt 1991", "bank": "DANA", "norek": "082122306196", "nama_pemilik": "DEWI HADI"}, {"nama": "Budi Saputra", "nik": "3440262506887540", "wa": "085872114688", "email": "budi.saputra255@gmail.com", "password": "Budi!2001", "ttl": "Bandung, 12 Agt 2001", "bank": "DANA", "norek": "087799362969", "nama_pemilik": "BUDI SAPUTRA"}, {"nama": "Ika Lestari", "nik": "3471590406993680", "wa": "081284088013", "email": "ika.lestari567@yahoo.com", "password": "Ika!2005", "ttl": "Padang, 13 Jan 2005", "bank": "MANDIRI", "norek": "4650728962", "nama_pemilik": "IKA LESTARI"}, {"nama": "Agus Hadi", "nik": "3348481409755799", "wa": "082244585214", "email": "agus.hadi184@zhedmail.id", "password": "Agus$1999", "ttl": "Yogyakarta, 18 Agt 1999", "bank": "GOPAY", "norek": "082152362108", "nama_pemilik": "AGUS HADI"}, {"nama": "Putri Subagyo", "nik": "3323351306759054", "wa": "08819184862", "email": "putri.subagyo713@yahoo.com", "password": "Putri$1992", "ttl": "Pontianak, 8 Agt 1992", "bank": "BRI", "norek": "3571354413", "nama_pemilik": "PUTRI SUBAGYO"}, {"nama": "Dwi Ramadhan", "nik": "3433310708930050", "wa": "082160089776", "email": "dwi.ramadhan607@yahoo.com", "password": "Dwi$2002", "ttl": "Padang, 1 Sep 2002", "bank": "OVO", "norek": "082162000528", "nama_pemilik": "DWI RAMADHAN"}, {"nama": "Putri Hidayat", "nik": "3604010510836801", "wa": "082236586593", "email": "putri.hidayat935@gmail.com", "password": "Putri!1989", "ttl": "Pontianak, 15 Nov 1989", "bank": "DANA", "norek": "08571652565", "nama_pemilik": "PUTRI HIDAYAT"}, {"nama": "Ahmad Purnama", "nik": "5143280211773237", "wa": "081376754364", "email": "ahmad.purnama359@outlook.co.id", "password": "Ahmad@1994", "ttl": "Yogyakarta, 6 Mei 1994", "bank": "DANA", "norek": "087839123087", "nama_pemilik": "AHMAD PURNAMA"}, {"nama": "Putri Lestari", "nik": "3468602609881089", "wa": "087728863601", "email": "putri.lestari818@gmail.com", "password": "Putri#1992", "ttl": "Medan, 26 Sep 1992", "bank": "SHOPEEPAY", "norek": "081263218757", "nama_pemilik": "PUTRI LESTARI"}, {"nama": "Sari Cahyono", "nik": "3187620908792933", "wa": "087711472255", "email": "sari.cahyono210@yahoo.com", "password": "Sari#1987", "ttl": "Balikpapan, 6 Okt 1987", "bank": "GOPAY", "norek": "085326232304", "nama_pemilik": "SARI CAHYONO"}, {"nama": "Rian Hutapea", "nik": "1255522409922312", "wa": "087759459686", "email": "rian.hutapea638@zhedmail.id", "password": "Rian#2001", "ttl": "Malang, 23 Nov 2001", "bank": "SHOPEEPAY", "norek": "085726630284", "nama_pemilik": "RIAN HUTAPEA"}, {"nama": "Eko Wibowo", "nik": "3633572109801473", "wa": "087736215250", "email": "eko.wibowo605@zhedmail.id", "password": "Eko$1991", "ttl": "Pontianak, 19 Apr 1991", "bank": "OVO", "norek": "085315688659", "nama_pemilik": "EKO WIBOWO"}, {"nama": "Yudi Saputra", "nik": "3227720303965061", "wa": "087859388326", "email": "yudi.saputra994@gmail.com", "password": "Yudi$2001", "ttl": "Semarang, 3 Jun 2001", "bank": "MANDIRI", "norek": "2097201297", "nama_pemilik": "YUDI SAPUTRA"}, {"nama": "Gilang Ramadhan", "nik": "1205352501753726", "wa": "088137284930", "email": "gilang.ramadhan217@gmail.com", "password": "Gilang*1991", "ttl": "Malang, 3 Apr 1991", "bank": "SHOPEEPAY", "norek": "081222058264", "nama_pemilik": "GILANG RAMADHAN"}, {"nama": "Reza Perkasa", "nik": "1321141107759857", "wa": "081215555720", "email": "reza.perkasa783@outlook.co.id", "password": "Reza*1986", "ttl": "Surabaya, 4 Nov 1986", "bank": "GOPAY", "norek": "082273671125", "nama_pemilik": "REZA PERKASA"}, {"nama": "Reza Ramadhan", "nik": "5177130903972084", "wa": "087794649040", "email": "reza.ramadhan964@gmail.com", "password": "Reza*1997", "ttl": "Depok, 2 Nov 1997", "bank": "MANDIRI", "norek": "7488483441", "nama_pemilik": "REZA RAMADHAN"}, {"nama": "Eko Wibowo", "nik": "5107122504984104", "wa": "082244242959", "email": "eko.wibowo782@yahoo.com", "password": "Eko!2005", "ttl": "Semarang, 4 Jun 2005", "bank": "DANA", "norek": "085336455249", "nama_pemilik": "EKO WIBOWO"}];
+const MODS={
+ guru:[["Data Siswa","TU","siswa","Tambah & kelola data siswa/kelas."],["Absensi Siswa","GURU","absen","Catat kehadiran harian per kelas."],["Jurnal & Nilai","GURU","nilai","Input nilai & jurnal mengajar."]],
+ murid:[["Nilai Saya","MURID","nilai","Lihat nilai tiap mapel."],["Kehadiran Saya","MURID","absen","Riwayat absensi."]],
+ wali:[["Nilai Anak","WALI","nilai","Pantau nilai anak."],["Kehadiran Anak","WALI","absen","Pantau absensi anak."]]
+};
+function home(){
+  $("#view").innerHTML=`<h2>Halo, ${esc(me.nama)}</h2><div class="grid">${MODS[me.role].map(m=>`<div class="box mod" data-k="${m[2]}"><span class="tag">${m[1]}</span><h3>${m[0]}</h3><p class="mu">${m[3]}</p></div>`).join("")}</div>`;
+  document.querySelectorAll(".mod").forEach(el=>el.onclick=()=>({siswa,absen,nilai})[el.dataset.k]());
+}
+const back=`<p><a href="#" id="bk">← Kembali</a></p>`;
+const bind=()=>{$("#bk").onclick=e=>{e.preventDefault();home()}};
+const myNis=()=>me.nis;
 
-document.getElementById('total-count').textContent = members.length;
-
-const logBox = document.getElementById('log');
-function log(msg, type) {
-    const p = document.createElement('div');
-    const color = type === 'ok' ? 'text-emerald-400' : type === 'err' ? 'text-rose-400' : type === 'skip' ? 'text-amber-400' : 'text-slate-400';
-    p.className = color;
-    p.textContent = msg;
-    logBox.appendChild(p);
-    logBox.scrollTop = logBox.scrollHeight;
+/* ---- Data Siswa (guru) ---- */
+async function siswa(){
+  const rows=(await getDocs(collection(db,"siswa"))).docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>(a.kelas+a.nama).localeCompare(b.kelas+b.nama));
+  $("#view").innerHTML=back+`<h2>Data Siswa</h2><div class="box"><div class="row"><input id="sN" placeholder="Nama"><input id="sI" placeholder="NIS"><input id="sK" placeholder="Kelas (X-A)"><button class="btn" id="sAdd">Tambah</button></div></div><br>
+  <div class="box" style="overflow:auto"><table><tr><th>NIS</th><th>Nama</th><th>Kelas</th><th></th></tr>${rows.map(r=>`<tr><td>${esc(r.nis)}</td><td>${esc(r.nama)}</td><td>${esc(r.kelas)}</td><td><a href="#" data-d="${r.id}">hapus</a></td></tr>`).join("")||"<tr><td colspan=4 class=mu>Belum ada data</td></tr>"}</table></div>`;
+  bind();
+  $("#sAdd").onclick=async()=>{const n=$("#sN").value.trim(),i=$("#sI").value.trim(),k=$("#sK").value.trim();if(!n||!i)return;await setDoc(doc(db,"siswa",i),{nama:n,nis:i,kelas:k});siswa()};
+  document.querySelectorAll("[data-d]").forEach(a=>a.onclick=async e=>{e.preventDefault();if(confirm("Hapus siswa ini?")){await deleteDoc(doc(db,"siswa",a.dataset.d));siswa()}});
 }
 
-function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+/* ---- Absensi ---- */
+async function absen(){
+  if(me.role!=="guru"){
+    const rows=await mine("absensi");
+    $("#view").innerHTML=back+`<h2>Kehadiran</h2><div class="box">${tbl(["Tanggal","Status"],rows.sort((a,b)=>b.tanggal.localeCompare(a.tanggal)).map(r=>[r.tanggal,r.status]))}</div>`;return bind();
+  }
+  const sis=(await getDocs(collection(db,"siswa"))).docs.map(d=>d.data());
+  const kls=[...new Set(sis.map(s=>s.kelas))].sort();
+  $("#view").innerHTML=back+`<h2>Absensi Siswa</h2><div class="box"><div class="row"><select id="aK">${kls.map(k=>`<option>${esc(k)}</option>`).join("")}</select><input id="aT" type="date" value="${today()}"></div><div id="aL"></div><button class="btn" id="aS">Simpan Absensi</button><div id="aM" class="msg okc"></div></div>`;
+  bind();
+  const draw=()=>{const k=$("#aK").value;$("#aL").innerHTML="<table>"+sis.filter(s=>s.kelas===k).map(s=>`<tr><td>${esc(s.nama)}</td><td><select data-n="${esc(s.nis)}" data-nm="${esc(s.nama)}"><option>Hadir</option><option>Sakit</option><option>Izin</option><option>Alpa</option></select></td></tr>`).join("")+"</table>"};
+  $("#aK").onchange=draw;draw();
+  $("#aS").onclick=async()=>{const t=$("#aT").value;for(const s of document.querySelectorAll("#aL select"))await setDoc(doc(db,"absensi",`${t}_${s.dataset.n}`),{nis:s.dataset.n,nama:s.dataset.nm,kelas:$("#aK").value,tanggal:t,status:s.value});$("#aM").textContent="Tersimpan."};
+}
 
-window.startImport = async function() {
-    const btn = document.getElementById('start-btn');
-    btn.disabled = true;
-    btn.textContent = 'Sedang memproses... jangan tutup halaman ini';
-    btn.className = "w-full bg-slate-600 text-slate-300 font-bold py-3 rounded-xl cursor-not-allowed";
-
-    let done = 0, ok = 0, skip = 0, err = 0;
-    const total = members.length;
-
-    for (const m of members) {
-        try {
-            const role = m.email.toLowerCase().includes('admin') ? 'admin' : 'member';
-            const cred = await createUserWithEmailAndPassword(auth, m.email, m.password);
-            await setDoc(doc(USERS_COL, cred.user.uid), {
-                email: m.email,
-                nama: m.nama,
-                nik: m.nik,
-                wa: m.wa,
-                ttl: m.ttl,
-                bank: m.bank,
-                norek: m.norek,
-                nama_pemilik: m.nama_pemilik,
-                saldo: 0,
-                role,
-                createdAt: new Date().toISOString(),
-                migrated: true
-            });
-            ok++;
-            log(`✔ Berhasil: ${m.nama} (${m.email})`, 'ok');
-        } catch (e) {
-            if (e.code === 'auth/email-already-in-use') {
-                skip++;
-                log(`⏭ Dilewati (sudah terdaftar): ${m.email}`, 'skip');
-            } else {
-                err++;
-                log(`✘ Gagal: ${m.email} — ${e.message}`, 'err');
-            }
-        }
-        done++;
-        document.getElementById('progress-bar').style.width = (done / total * 100) + '%';
-        document.getElementById('progress-text').textContent = `${done} / ${total} diproses — ${ok} berhasil, ${skip} dilewati, ${err} gagal`;
-        await sleep(400); // jeda kecil agar tidak kena rate limit Firebase
-    }
-
-    // Pastikan tidak tertinggal login sebagai akun member terakhir yang dibuat
-    try { await signOut(auth); } catch(e) {}
-
-    btn.textContent = '✅ Selesai! Silakan tutup halaman ini.';
-    log(`\n=== SELESAI: ${ok} berhasil, ${skip} dilewati (sudah ada), ${err} gagal ===`, 'ok');
-};
+/* ---- Nilai ---- */
+async function nilai(){
+  if(me.role!=="guru"){
+    const rows=await mine("nilai");
+    $("#view").innerHTML=back+`<h2>Nilai</h2><div class="box">${tbl(["Mapel","Jenis","Nilai","Tanggal"],rows.map(r=>[r.mapel,r.jenis,r.nilai,r.tanggal]))}</div>`;return bind();
+  }
+  const rows=(await getDocs(collection(db,"nilai"))).docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>b.tanggal.localeCompare(a.tanggal)).slice(0,50);
+  $("#view").innerHTML=back+`<h2>Jurnal & Nilai</h2><div class="box"><div class="row"><input id="nI" placeholder="NIS"><input id="nM" placeholder="Mata pelajaran"><select id="nJ"><option>Harian</option><option>UTS</option><option>UAS</option><option>Tugas</option></select><input id="nV" type="number" min="0" max="100" placeholder="Nilai"><button class="btn" id="nA">Simpan</button></div><div id="nMsg" class="msg err"></div></div><br><div class="box" style="overflow:auto">${tbl(["NIS","Nama","Mapel","Jenis","Nilai","Tanggal"],rows.map(r=>[r.nis,r.nama,r.mapel,r.jenis,r.nilai,r.tanggal]))}</div>`;
+  bind();
+  $("#nA").onclick=async()=>{
+    const nis=$("#nI").value.trim(),s=await getDoc(doc(db,"siswa",nis));
+    if(!s.exists())return $("#nMsg").textContent="NIS tidak ditemukan di Data Siswa.";
+    await addDoc(collection(db,"nilai"),{nis,nama:s.data().nama,mapel:$("#nM").value.trim(),jenis:$("#nJ").value,nilai:+$("#nV").value,tanggal:today()});nilai();
+  };
+}
+async function mine(col){return (await getDocs(query(collection(db,col),where("nis","==",myNis())))).docs.map(d=>d.data())}
+function tbl(h,r){return `<table><tr>${h.map(x=>`<th>${x}</th>`).join("")}</tr>${r.map(x=>`<tr>${x.map(c=>`<td>${esc(c)}</td>`).join("")}</tr>`).join("")||`<tr><td colspan=${h.length} class=mu>Belum ada data</td></tr>`}</table>`}
 </script>
-</body>
-</html>
+</body></html>
